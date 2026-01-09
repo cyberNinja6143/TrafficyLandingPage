@@ -31,3 +31,4 @@ D:\Projects\Landing-Pages\TrafficyLandingPage\TrafficyLandingPage\obj\Debug\net8
 D:\Projects\Landing-Pages\TrafficyLandingPage\TrafficyLandingPage\obj\Debug\net8.0\TrafficyLandingPage.pdb
 D:\Projects\Landing-Pages\TrafficyLandingPage\TrafficyLandingPage\obj\Debug\net8.0\TrafficyLandingPage.genruntimeconfig.cache
 D:\Projects\Landing-Pages\TrafficyLandingPage\TrafficyLandingPage\obj\Debug\net8.0\ref\TrafficyLandingPage.dll
+D:\Projects\Landing-Pages\TrafficyLandingPage\TrafficyLandingPage\obj\Debug\net8.0\TrafficyLandingPage.sourcelink.json
