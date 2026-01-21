@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,6 +20,36 @@
             background-color: #ffffff;
             background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px), linear-gradient(to right, #f1f5f9 1px, transparent 1px), linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
             background-size: 24px 24px, 96px 96px, 96px 96px;
+        }
+
+        .pillow {
+            position: absolute;
+            background-color: #e2e8f0;
+            border-radius: 30%;
+            opacity: 0.6;
+            box-shadow: inset -2px -2px 6px rgba(0,0,0,0.05);
+            animation: fall linear forwards;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @@keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 0;
+                transform: rotate(0deg);
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                top: 110%;
+                opacity: 0;
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -43,6 +76,7 @@
     </nav>
 
     <section id="mission" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-white bg-grid">
+        <div id="pillow-container" class="absolute inset-0 overflow-hidden pointer-events-none z-0"></div>
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(255,255,255,0.8)_100%)] pointer-events-none"></div>
         <div class="relative z-10 px-4 mx-auto max-w-4xl text-center">
             <h1 class="mb-6 text-4xl font-bold tracking-tight leading-tight text-slate-900 md:text-6xl">
@@ -130,5 +164,38 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('pillow-container');
+            if (!container) return;
+
+            function createPillow() {
+                const pillow = document.createElement('div');
+                pillow.classList.add('pillow');
+                
+                // Random properties
+                const size = Math.random() * 30 + 20; // 20px to 50px
+                const left = Math.random() * 100; // 0% to 100%
+                const duration = Math.random() * 5 + 8; // 8s to 13s (slower is calmer)
+                const color = Math.random() > 0.5 ? '#cbd5e1' : '#e2e8f0'; 
+
+                pillow.style.width = `${size}px`;
+                pillow.style.height = `${size * 0.8}px`; 
+                pillow.style.left = `${left}%`;
+                pillow.style.backgroundColor = color;
+                pillow.style.animationDuration = `${duration}s`;
+
+                container.appendChild(pillow);
+
+                // Cleanup
+                setTimeout(() => {
+                    pillow.remove();
+                }, duration * 1000);
+            }
+
+            // Spawn loop
+            setInterval(createPillow, 600); 
+        });
+    </script>
 </body>
 </html>
