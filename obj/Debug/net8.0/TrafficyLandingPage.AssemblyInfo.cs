@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrafficyLandingPage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7c30091a0aa3df8d38ec0a4ddc7f2e4a23a49e3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91752a0847742f444eb6d5cd5292f2e45245c1f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrafficyLandingPage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrafficyLandingPage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
