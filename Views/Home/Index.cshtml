@@ -120,12 +120,16 @@
             <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row hover:shadow-md transition duration-300">
 
                 <div class="md:w-1/3 bg-slate-50/30 flex items-center justify-center p-12 border-b md:border-b-0 md:border-r border-slate-200">
-                    <img src="@Url.Action("Serve", "Home", new { id = "tabsy_icon" })" alt="Tabsy Icon" class="w-24 h-24 rounded-[22%] shadow-lg">
+                    <a href="@Url.Action("Tabsy", "Home")" class="transition-transform duration-200 hover:scale-105">
+                        <img src="@Url.Action("Serve", "Home", new { id = "tabsy_icon" })" alt="Tabsy Icon" class="w-24 h-24 rounded-[22%] shadow-lg">
+                    </a>
                 </div>
 
                 <div class="p-8 md:p-10 md:w-2/3 flex flex-col justify-center">
                     <div class="flex items-center space-x-3 mb-4">
-                        <h3 class="text-2xl font-bold text-slate-900">Tabsy</h3>
+                        <a href="@Url.Action("Tabsy", "Home")" class="transition-transform duration-200 hover:scale-105">
+                            <h3 class="text-2xl font-bold text-slate-900">Tabsy</h3>
+                        </a>
                         <span class="px-2.5 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-bold rounded border border-blue-100 uppercase tracking-widest">Available Now</span>
                     </div>
 
@@ -165,7 +169,7 @@
                         <span class="font-bold text-slate-900">Trafficy</span>
                     </div>
                     <p class="text-slate-500 text-sm max-w-xs leading-relaxed">
-                        Eliminate the guesswork. Trafficy builds software to create transparency and alignment in your digital communications.
+                        Reduce the opacity. Trafficy builds software to create transparency and reduce ambiguity in your digital communications.
                     </p>
                 </div>
                 <div class="flex justify-end space-x-12">

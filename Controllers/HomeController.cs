@@ -24,6 +24,11 @@ namespace TrafficyLandingPage.Controllers
             return View();
         }
 
+        public IActionResult Tabsy()
+        {
+            return View("Tabsy");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
